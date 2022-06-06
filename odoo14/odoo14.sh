@@ -7,6 +7,11 @@
 # v2.4
 # Last updated: 2020-10-02
 
+sudo git clone https://github.com/juanframunoz/odoo14script
+sudo cd odoo14script/odoo14
+sudo chmod +x odoo14.sh 
+sudo ./odoo14.sh
+
 OS_NAME=$(lsb_release -cs)
 usuario=$USER
 DIR_PATH=$(pwd)
@@ -122,13 +127,17 @@ db_port = False
 ;db_password =
 data_dir = $PATHBASE/data
 logfile= $PATH_LOG/odoo$VCODE-server.log
+
 ############# addons path ######################################
+
 addons_path =
     $PATHREPOS,
     $PATHREPOS/backend_theme,
     $PATHREPOS_OCA/web,
     $PATHBASE/$VERSION/odoo/addons
+
 #################################################################
+
 xmlrpc_port = $PORT
 ;dbfilter = odoo$VCODE
 logrotate = True
@@ -143,10 +152,12 @@ echo "
 [Unit]
 Description=Odoo$VCODE
 After=postgresql.service
+
 [Service]
 Type=simple
 User=$usuario
 ExecStart=$PATHBASE/$VERSION/venv/bin/python $PATHBASE/$VERSION/odoo/odoo-bin --config $PATHBASE/config/odoo$VCODE.conf
+
 [Install]
 WantedBy=multi-user.target
 " | sudo tee --append /etc/systemd/system/odoo$VCODE.service
@@ -159,16 +170,3 @@ sudo chown -R $usuario: $PATHBASE
 echo "Odoo $VERSION Installation has finished!! ;) by odooerpcloud.com"
 IP=$(ip route get 8.8.8.8 | head -1 | cut -d' ' -f7)
 echo "You can access from: http://$IP:$PORT  or http://localhost:$PORT"
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@juanframunoz 
-juanframunoz
-/
-odoo14script
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-odoo14script/odoo14.sh
-@juanframunoz
-juanframunoz Rename script to odoo14.sh
-Latest commit 8eb892a 28 minutes ago
- History
- 1 contributor
-167 lines (135 sloc)  4.72 KB
-  
 #!/bin/bash
 # Copyright 2020 odooerpcloud.com
 # AVISO IMPORTANTE!!! (WARNING!!!)

@@ -7,10 +7,6 @@
 # v2.4
 # Last updated: 2020-10-02
 
-sudo git clone https://github.com/juanframunoz/odoo14script
-sudo cd odoo14script/odoo14
-sudo chmod +x odoo14.sh 
-sudo ./odoo14.sh
 
 OS_NAME=$(lsb_release -cs)
 usuario=$USER

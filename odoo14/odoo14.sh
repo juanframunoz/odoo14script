@@ -163,6 +163,6 @@ sudo systemctl start odoo$VCODE
 
 sudo chown -R $usuario: $PATHBASE
 
-echo "Odoo $VERSION Installation has finished!! ;) by odooerpcloud.com"
+echo "Odoo $VERSION Installation has finished!! ;) by dospz.com"
 IP=$(ip route get 8.8.8.8 | head -1 | cut -d' ' -f7)
 echo "You can access from: http://$IP:$PORT  or http://localhost:$PORT"
